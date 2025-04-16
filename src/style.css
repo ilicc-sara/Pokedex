@@ -12,6 +12,21 @@
   text-align: center;
 }
 
+.main-container {
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
 h1 {
   font-size: 64px;
+}
+
+.type-list {
+  list-style: none;
+}
+.type-pic {
+  width: 100px;
+  height: 100px;
 }
