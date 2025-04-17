@@ -29,7 +29,6 @@ function displayPokemonList(data, id) {
     let pokemonItem = document.createElement("li");
     pokemonItem.innerHTML = `${capitalizeEveryWord(pokemon.pokemon.name)}`;
 
-    console.log(pokemon);
     pokemonItem.className = "pokemon-list-item";
     pokemonItem.id = id;
     pokemonItem.setAttribute("data-id", pokemon.pokemon.url);
@@ -43,7 +42,6 @@ function displayPokemonDetails(data) {
   overlay.classList.remove("hidden");
 
   let type = pokemonListEl.querySelector(".pokemon-list-item").id;
-
   // prettier-ignore
   pokemonDetailsEl.querySelector(".pokemon-img").src = data.sprites.front_default;
   // prettier-ignore
@@ -79,12 +77,6 @@ pokemonListEl.addEventListener("click", function (e) {
     .catch((error) => console.error(error));
 });
 
-overlay.addEventListener("click", function (e) {
-  console.log(e.target);
-  pokemonDetailsEl.classList.add("hidden");
-  overlay.classList.add("hidden");
-});
-
 searchPokemonForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -96,4 +88,9 @@ searchPokemonForm.addEventListener("submit", function (e) {
     .catch((error) => alert(error));
 
   searchPokemonInput.value = "";
+});
+
+overlay.addEventListener("click", function (e) {
+  pokemonDetailsEl.classList.add("hidden");
+  overlay.classList.add("hidden");
 });
