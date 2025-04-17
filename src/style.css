@@ -91,7 +91,7 @@ html {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -107,7 +107,8 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(214, 101, 155);
+  /* background-color: rgb(214, 101, 155); */
+  background-color: #ffbeaa;
   /* font-size: 32px; */
   height: 500px;
   width: 350px;
@@ -125,9 +126,20 @@ html {
   align-self: center;
 }
 
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .pokemon-info {
   display: flex;
   justify-content: space-between;
+}
+
+.pokemon-img {
+  height: 200px;
+  width: 200px;
 }
 
 .hidden {
