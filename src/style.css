@@ -55,12 +55,18 @@ html {
 .pokemons-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  list-style-position: inside;
+  list-style-position: outside;
+  /* list-style-type: decimal; */
   overflow-y: scroll;
   width: 90%;
   height: 70%;
   row-gap: 25px;
   font-size: 16px;
+  padding-left: 35px;
+}
+
+.pokemon-list-item {
+  padding-left: 7px;
 }
 
 .pokemon-type-container {

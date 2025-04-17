@@ -28,8 +28,23 @@ typeListEl.addEventListener("click", function (e) {
         let pokemonItem = document.createElement("li");
         pokemonItem.innerHTML = `${pokemon.pokemon.name}`;
 
+        // console.log(pokemon.id);
+        pokemonItem.className = "pokemon-list-item";
+        pokemonItem.setAttribute("data-id", pokemon.pokemon.url);
+
         pokemonListEl.appendChild(pokemonItem);
       });
     })
+    .catch((error) => console.error(error));
+});
+
+pokemonListEl.addEventListener("click", function (e) {
+  if (!e.target.classList.contains("pokemon-list-item")) return;
+
+  const pokemonId = e.target.dataset.id;
+
+  fetch(pokemonId)
+    .then((response) => response.json())
+    .then((data) => console.log(data.id))
     .catch((error) => console.error(error));
 });
