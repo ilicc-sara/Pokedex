@@ -57,7 +57,7 @@ html {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   list-style-position: inside;
   overflow-y: scroll;
-  width: 85%;
+  width: 90%;
   height: 70%;
   row-gap: 25px;
   font-size: 16px;
